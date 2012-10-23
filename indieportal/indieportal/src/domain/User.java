@@ -2,6 +2,7 @@ package domain;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.Iterator;
 
 public class User extends DomainObject{
 	public enum Role {Guest,User,Moderator,Administrator,Developer}
@@ -11,6 +12,7 @@ public class User extends DomainObject{
 	public Date dateOfRegistration;
 	public Date dateOfLastVisit;
 	public Role role;
+    public Integer rating;
 
 	public Collection<Message> messages;
 	public Collection<Theme> themes; 
@@ -62,5 +64,24 @@ public class User extends DomainObject{
 		this.dateOfLastVisit = dateOfLastVisit;
 	}
 
+    protected void setRating(Integer rating){
+        this.rating = rating;
+    };
+    public Integer getRating(){
+        return rating;
+    };
+
+    public void calculateSummaryRating() {
+        this.rating = 0;
+
+        for (Iterator<Message> i=messages.iterator(); i.hasNext();){
+            this.rating += i.next().rating;
+        }
+
+        for (Iterator<Theme> i=themes.iterator(); i.hasNext();){
+            this.rating += i.next().rating;
+        }
+
+    }
 
 }

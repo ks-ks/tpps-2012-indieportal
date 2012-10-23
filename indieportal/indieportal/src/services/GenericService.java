@@ -26,7 +26,7 @@ public class GenericService<T extends DomainObject> implements IGenericService<T
 	}
 
 	@Override
-	public void delEntity(DomainObject entity) {
+	public void delEntity(T entity) {
 		map.remove(entity.getId());	
 	}
 
