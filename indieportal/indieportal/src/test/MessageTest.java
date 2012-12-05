@@ -53,16 +53,16 @@ public class MessageTest {
 	@Test
 	public void testIncreaseRating() {
 		msg.increaseRating();
-		assert(msg.rating == 1);
+		assert(msg.getRating() == 1);
 		msg.increaseRating();
-		assert(msg.rating == 2);
+		assert(msg.getRating() == 2);
 		
 	}
 
 	@Test
 	public void testDecreaseRating() {
 		msg.decreaseRating();
-		assert(msg.rating == 1);
+		assert(msg.getRating() == 1);
 	}
 
 }

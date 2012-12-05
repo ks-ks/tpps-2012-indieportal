@@ -2,12 +2,24 @@ package domain;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+
+import org.hibernate.validator.NotEmpty;
+import org.hibernate.validator.NotNull;
+
+@Entity
 public abstract class Text extends DomainObject{
-	public User creator;
-	public Date dateOfCreation;
-	public Date dateOfModification;
-	public String text;
-	public Integer rating;
+	
+	@NotNull
+	User creator;
+	@NotNull
+	Date dateOfCreation;
+	@NotNull
+	Date dateOfModification;
+	@NotEmpty
+	String text;
+	@NotEmpty 
+	Integer rating;
 	
 	protected Text(){
 		this.dateOfCreation = new Date();

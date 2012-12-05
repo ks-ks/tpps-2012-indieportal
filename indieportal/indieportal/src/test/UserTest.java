@@ -46,35 +46,35 @@ public class UserTest {
 
 	@Test
 	public void testGetLogin() {
-		assert(u.login == "login");
+		assert(u.getLogin() == "login");
 	}
 
 	@Test
 	public void testSetLogin() {
 		u.setLogin("login2");
-		assert(u.login == "login2");
+		assert(u.getLogin() == "login2");
 	}
 
 	@Test
 	public void testGetName() {
-		assert(u.name == "name");
+		assert(u.getName() == "name");
 	}
 
 	@Test
 	public void testSetName() {
 		u.setName("name2");
-		assert(u.name == "name2");
+		assert(u.getName() == "name2");
 	}
 
 	@Test
 	public void testGetPassword() {
-		assert (u.password == "password");
+		assert (u.getPassword() == "password");
 	}
 
 	@Test
 	public void testSetPassword() {
 		u.setPassword("password2");
-		assert (u.password == "password2");
+		assert (u.getPassword() == "password2");
 		
 	}
 }
