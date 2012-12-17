@@ -14,7 +14,11 @@ public class FileTest {
 	public void setUp() throws Exception {
 		f = new File("lol", File.FileType.Image);
 	}
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> dddd
 	@Test
 	public void testGetType() {
 		assert(f.getType() == FileType.Image);
@@ -31,15 +35,25 @@ public class FileTest {
 
 	@Test
 	public void testGetName() {
+<<<<<<< HEAD
 		assert(f.getName().equalsIgnoreCase("lol"));
 
+=======
+		assert(f.name.equalsIgnoreCase("lol"));
+>>>>>>> dddd
 	}
 
 	@Test
 	public void testSetName() {
+<<<<<<< HEAD
 		assert(f.getName().equalsIgnoreCase("lol"));
 		f.setName("not lol");
 		assert(f.getName().equalsIgnoreCase("not lol"));
+=======
+		assert(f.name.equalsIgnoreCase("lol"));
+		f.setName("not lol");
+		assert(f.name.equalsIgnoreCase("not lol"));
+>>>>>>> dddd
 	}
 
 }

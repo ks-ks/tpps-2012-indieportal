@@ -46,35 +46,59 @@ public class UserTest {
 
 	@Test
 	public void testGetLogin() {
+<<<<<<< HEAD
 		assert(u.getLogin() == "login");
+=======
+		assert(u.login == "login");
+>>>>>>> dddd
 	}
 
 	@Test
 	public void testSetLogin() {
 		u.setLogin("login2");
+<<<<<<< HEAD
 		assert(u.getLogin() == "login2");
+=======
+		assert(u.login == "login2");
+>>>>>>> dddd
 	}
 
 	@Test
 	public void testGetName() {
+<<<<<<< HEAD
 		assert(u.getName() == "name");
+=======
+		assert(u.name == "name");
+>>>>>>> dddd
 	}
 
 	@Test
 	public void testSetName() {
 		u.setName("name2");
+<<<<<<< HEAD
 		assert(u.getName() == "name2");
+=======
+		assert(u.name == "name2");
+>>>>>>> dddd
 	}
 
 	@Test
 	public void testGetPassword() {
+<<<<<<< HEAD
 		assert (u.getPassword() == "password");
+=======
+		assert (u.password == "password");
+>>>>>>> dddd
 	}
 
 	@Test
 	public void testSetPassword() {
 		u.setPassword("password2");
+<<<<<<< HEAD
 		assert (u.getPassword() == "password2");
+=======
+		assert (u.password == "password2");
+>>>>>>> dddd
 		
 	}
 }
