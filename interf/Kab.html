@@ -85,9 +85,18 @@
             	         
                 <h3>Photos</h3>
                 <ul class="images">
-                	<li><a href="#"><img src="img/image.gif" alt="An example of an image" width="80" height="80" class="info" karma : +/- xxx /></a></li>
+                	<li><a href=""><img src="img/image.gif" alt="An example of an image" width="80" height="80" 	 </a></li>
+					<li> karma : +/- xxx </li>
                     <p 
-                </ul>
+               <a onclick="return checkEvent(event) ? true : startVideocall(event, 8901134, 1)" onmouseover="stManager.add(['call.js','call.css','notifier.js','notifier.css']); showTooltip(this, {url: 'call.php', params: {act: 'call_tooltip', mid: 8901134}, slideX: 15, hidedt: 500, shift: [-44, -50, 3], className: 'vcall_tt'});" 
+					class="button_link cut_right" id="videocall_btn">
+						<button>
+							<span class="profile_call_text">Позвонить</span>
+								<div class="profile_calls_btn profile_call_icon">
+								</div>
+						</button>
+				</a>
+			   </ul>
             </div>
         
         </div>
