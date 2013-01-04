@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.Iterator;
 
 import javax.persistence.Entity;
+
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.OneToMany;
@@ -12,6 +13,15 @@ import javax.persistence.OneToMany;
 import org.hibernate.validator.NotEmpty;
 import org.hibernate.validator.NotNull;
 import javax.persistence.Basic;
+
+
+import org.hibernate.validator.NotEmpty;
+import org.hibernate.validator.NotNull;
+
+import domain.DomainObject;
+import domain.Message;
+import domain.Theme;
+
 
 @Entity
 public class User extends DomainObject{
@@ -27,19 +37,15 @@ public class User extends DomainObject{
 	@NotNull
 	Date dateOfRegistration;
 	@NotNull
-	@Basic(optional = false)
+
 	Date dateOfLastVisit;
-	@Enumerated(EnumType.STRING)
-	@NotNull(message = "User role cannot be null")
-	Role role;
 	@NotNull
-	Long rating;
-	
-	//@OneToMany(mappedBy = "creator", cascade = CascadeType.ALL)
-	@OneToMany(mappedBy = "creator")
+	Role role;
+	@NotEmpty
+	long rating;
+
 	Collection<Message> messages;
-	//@OneToMany(mappedBy = "creator", cascade = CascadeType.ALL)
-	@OneToMany(mappedBy = "creator")
+
 	Collection<Theme> themes; 
 
 	
@@ -89,25 +95,26 @@ public class User extends DomainObject{
 		this.dateOfLastVisit = dateOfLastVisit;
 	}
 
-	public void setDateOfRegistration(Date dateOfRegistration) {
-		this.dateOfRegistration = dateOfRegistration;
-	}
-    public void setRating(Long rating){
+
+    protected void setRating(long rating){
         this.rating = rating;
     };
-    public Long getRating(){
+    public long getRating(){
+
         return rating;
     };
 
     public void calculateRating() {
-        this.rating = 0l;
+
+        this.rating = 0;
+
 
         for (Iterator<Message> i=messages.iterator(); i.hasNext();){
-            this.rating += i.next().rating;
+            this.rating += i.next().getRating();
         }
 
         for (Iterator<Theme> i=themes.iterator(); i.hasNext();){
-            this.rating += i.next().rating;
+            this.rating += i.next().getRating();
         }
 
     }

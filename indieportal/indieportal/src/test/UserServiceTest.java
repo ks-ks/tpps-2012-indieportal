@@ -34,8 +34,8 @@ public class UserServiceTest {
 		u.setPassword("pass");
 		u.setRole(Role.User);
 		u.setDateOfLastVisit(d);
-		u.setDateOfRegistration(d);
-		u.setRating(1l);
+//		u.setDateOfRegistration(d);
+//		u.setRating(1l);
 		savedUser = us.save(u);
 	}
 

@@ -4,9 +4,12 @@
       <attribute name="provider-id" value="jpa-no-op-library-provider"/>
     </node>
   </facet>
+<<<<<<< HEAD
   <facet id="jst.jsf">
     <node name="libprov">
       <attribute name="provider-id" value="jsf-user-library-provider"/>
     </node>
   </facet>
+=======
+>>>>>>> ec6a8a77196814cf5eef63d762023294d687d11e
 </root>

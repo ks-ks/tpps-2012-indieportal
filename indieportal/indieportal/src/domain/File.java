@@ -1,13 +1,8 @@
 package domain;
 
 
-import static javax.persistence.EnumType.STRING;
 
 import javax.persistence.Entity;
-import javax.persistence.Enumerated;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-
 import org.hibernate.validator.NotEmpty;
 import org.hibernate.validator.NotNull;
 
@@ -17,18 +12,13 @@ public class File extends DomainObject{
 	public enum FileType {Image, Video, Executable} 
 	@NotEmpty
 	String name;
-	@Enumerated(STRING)
-	@NotNull(message = "User role cannot be null")
+	
+	@NotNull
 	FileType type;
 
-	@ManyToOne
-	@JoinColumn(name = "owner", referencedColumnName = "id")
-	Message owner;
-	
 	public File() {
 		
 	}
-
 
 	public FileType getType() {
 		return type;

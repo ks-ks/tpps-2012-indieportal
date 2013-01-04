@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>indieportal</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<meta name="copyright" content="" />	  
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta name="revisit-after" content="3 days" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />	
+</head>
+
+<body>
+		
+    <div id="container">
+       	<div id="header">
+        <h1><a href="home.html">indieportal	</a></h1>
+           <ul>
+			    <li><a href="home.html">Главная</a></li>
+            	<li><a href="chat.html">Игровое общение</a></li>
+                <li><a href="download.html">Скачать</a></li>
+				<li><a href="Kab.html">Личный кабинет</a></li>
+				<li><a href="qqq.html"class="on">Регистрация</a></li>
+			</ul>
+			
+			<div  class="on"; style=" position: top: 90px; left: 990px; 
+			font-family: Tahoma sans-serif; font-size: 24px; >
+				<span id="ui-id-1" class="ui-dialog-title"></span>
+					<a href="vhod.html"  ui-corner-all" role="button">
+						<span class="ui-icon ui-icon-closethick">Войти</span> 
+					</a>
+			</div>
+
+			
+			
+			<form method="get" action="#">
+            	<p><input type="text" style="position: fixed; top: 45px; left: 770px; width: 240px; name="Поиск" /><input type="submit" value="Найти" class="btn" /></p>
+            </form> 
+			
+			
+			 <!--<form method="get" action="#">
+            	<p><input type="text" name="search" /><input type="submit" value="Search" class="btn" /></p>
+            </form> -->
+        </div>
+			
+        
+        <div id="content">
+      	  
+            	<div id="content">
+				
+		<div id="top-div" style="position: fixed; top: 500px; left: -50px; width: 200px; height: 80%; z-index: 100; cursor: pointer; text-align: center; opacity: 0.8; background-position: initial initial; background-repeat: initial initial;">
+			<div id="top-div-link" style="margin: 20px 0px 0px 10px; font-weight: 0000; z-index: 100; font-size: 50px;"><a href="#" style="border: none;">↑</a></div>
+		</div>		
+					<h2>Новость №3</h2>
+					<div class="">
+						Лакбораторная работа №4
+					</div>
+					<p> 
+					Лабораторная работа №4
+Nagios. Настройка мониторинга компьютерных
+систем и сетей
+4.1 Цель работы
+Ознакомиться с принципом работы и основным функционалом
+Nagios. Установить и сконфигурировать Nagios-сервер для мониторин-
+га разнообразных типов сервисов. Протестировать работу с помощью
+веб-сервера Apache.
+4.2 Теоретические сведения
+Nagios — система с открытым кодом, предназначенная для мони-
+торинга компьютерных систем и сетей. Она следит за указанными в на-
+стройках узлами и службами, и оповещает администратора в случае,
+если какие-то из служб прекращают (или возобновляют) свою работу.
+Nagios, первоначально созданная под именем Netsaint, разработа-
+на Этаном Галстадом (Ethan Galstad). Он же поддерживает и развивает
+систему сегодня, совместно с командой разработчиков, которые зани-
+маются как официальными, так и неофициальными плагинами.
+Первоначально Nagios была разработана для работы под
+GNU/Linux, но она также хорошо работает и под другими Unix-
+подобными ОС.
+Nagios распространяется по лицензии GNU General Public License
+Version 2.
+Детальное описание системы, установочные пакеты и плагины,
+особенности установки приведены на официальном сайте Nagios
+http://www.nagios.org/.
+4.2.1 ОБЗОР ВОЗМОЖНОСТЕЙ NAGIOS
+Nagios предоставляет следующие сервисы:
+– мониторинг сетевых служб (SMTP, POP3, HTTP, NNTP, ICMP,
+SNMP);
+– мониторинг состояния хостов (загрузка процессора,
+использование диска, системные логи) в большинстве сетевых
+операционных систем;
+– поддержка удаленного мониторинга через шифрованные
+туннели SSH или SSL;
+– простая архитектура модулей расширений (плагинов)
+позволяет, используя любой из большинства современных
+языков программирования (Shell, C++, Perl, Python, PHP, C# и
+другие), разрабатывать свои собственные способы проверки
+служб;
+Сетевые информационные технологии
+43
+– параллельная проверка служб;
+– возможность определять иерархии хостов сети с помощью
+«родительских» хостов, позволяет обнаруживать и различать
+хосты, которые вышли из строя, и те, которые недоступны;
+– отправка оповещений в случае возникновения проблем со
+службой или хостом (с помощью почты, смс, или любым
+другим способом, определенным пользователем через модуль
+системы);
+– возможность определять обработчики событий произошедших
+со службами или хостами для проактивного разрешения
+проблем;
+– автоматическая ротация лог-файлов;
+– возможность организации совместной работы нескольких
+систем мониторинга с целью повышения надёжности и
+создания распределенной системы мониторинга;
+– включает в себя утилиту nagiostats, которая выводит общую
+сводку по всем хостам, по которым ведется мониторинг.
+4.2.2 МОНИТОРИНГ ПУБЛИЧНЫХ СЕРВИСОВ
+4.2.2.1 Плагины для мониторинга сервис
+При необходимости мониторинга особого вида приложения, сер-
+виса или протокола можно воспользоваться уже существующими пла-
+гинами (http://nagios.sourceforge.net/docs/3_0/plugins.html). Официаль-
+ный дистрибутив Nagios плагинов поставляет набор плагинов для мо-
+ниторинга различного рода сервисов и протоколов. Существует множе-
+ство включенных плагинов, которые находятся в подкаталоге contrib/
+дистрибутива плагинов. На сайте www.nagios.org/download/addons со-
+держится множество дополнительных плагинов, разработанных сто-
+ронними пользователями.
+Существует возможность написания собственного плагина. Соот-
+ветствующая документация приведена на
+http://nagios.sourceforge.net/docs/3_0/pluginapi.html.
+4.2.2.2 Определение хоста мониторинга
+Для мониторинга сервисов первоначально необходимо опреде-
+лить хост мониторинга. Определение хоста можно задать в отдельном
+файле или в уже существующем .cfg-файле. Например, определение
+хоста мониторинга с названием remotehost будет выглядеть следующим
+образом:
+define host{
+use generic-host ; Inherit default values
+from a template
+Методические указания к выполнению лабораторных работ
+44
+host_name remotehost ; The name we're
+giving to this host
+alias Some Remote Host ; A longer name
+associated with the host
+address 192.168.1.50 ; IP address of the
+host
+hostgroups allhosts ; Host groups this
+host is associated with
+}
+4.2.2.3 Определение сервиса мониторинга
+Определение нового сервиса мониторинга можно выполнить в
+отдельном .cfg-файле или уже существующем.
+Ниже приведен пример добавления мониторинга FTP-сервера,
+расположенного на remotehost, для чего используется плагин check_ftp.
+Файл commands.cfg содержит определение команды для исполь-
+зования плагина check_ftp:
+define command{
+command_name check_ftp
+command_line $USER1$/check_ftp -H $HOSTADDRESS$
+$ARG1$
+}
+Стандартное определение сервиса мониторинга FTP-сервера на
+remotehost выглядит следующим образом:
+define service{
+use generic-service ; Inherit default values
+from a template
+host_name remotehost
+service_description FTP
+check_command check_ftp
+}
+При такой конфигурации Nagios производит мониторинг FTP-
+сервиса и выдает сигнал в случае отсутствия ответа от сервера в тече-
+нии 10 с.
+Сетевые информационные технологии
+45
+Ниже приведен вариант конфигурации сервиса для проверки ра-
+ботоспособности FTP-сервера, находящегося на порту 1023 на
+remotehost. В данном случае соответствующее оповещение будет про-
+исходить в случае отсутствия ответа от сервера в течение 5 с, или если
+ответ не содержит строку «Pure-FTPd [TLS]»:
+define service{
+use generic-service ; Inherit default
+values from a template
+host_name remotehost
+service_description Special FTP
+check_command check_ftp!-p 1023 -t 5 -e "Pure-
+FTPd [TLS]"
+}
+4.3 Порядок выполнения работы
+1. Устанавливаем пакеты, необходимые для работы Nagios.
+Для ОС Ubuntu устанавливаем следующие пакеты:
+aptitude install apache2 libgd2-xpm-dev
+aptitude install build-essential
+Для ОС Fedora устанавливаем следующие пакеты:
+yum install httpd
+yum install gcc
+yum install glibc glibc-common
+yum install gd gd-devel
+Детальная информация по установке Nagios для ОС Fedora при-
+ведена на официальном сайте в разделе:
+http://nagios.sourceforge.net/docs/3_0/quickstart-fedora.html.
+2. Создаем специального пользователя nagios и группу с таким же
+названием, от имени которых будет работать Nagios (необходимо
+выполнить до компиляции исходников). Для этого выполняем
+следующие команды:
+useradd -m nagios
+passwd nagios
+Проверяем существование группы nagios (в ранних дистрибути-
+вах при создании нового пользователя соответствующая группа авто-
+матически не создается):
+grep nagios /etc/group
+nagios:x:1001:
+Если вывод ничего не показал, создаем такую группу вручную:
+usermod -G nagios nagios
+Методические указания к выполнению лабораторных работ
+46
+3. Создаем группу nagcmd, которая необходима для управления на-
+стройками через веб-интерфейс. В эту группу должна быть вклю-
+чена учетная запись веб-сервера (в Ubuntu — www-data, в Fedora –
+apache) и пользователь nagios:
+groupadd nagcmd
+usermod -G nagcmd nagios
+usermod -G nagcmd www-data
+4. Скачиваем последние версии Nagios и плагины (Plugins) с офици-
+ального сайта (www.nagios.org/download). Плагины можно скачать
+со специального сайта nagiosplugins.org. Здесь же доступна и
+ссылка на страницу с аддонами (www.nagios.org/download/addons).
+Для установки они не нужны, но могут впоследствии понадобить-
+ся при настройке мониторинга некоторых сервисов.
+5. Распаковываем полученные архивы и конфигурируем:
+tar xzf nagios-3.0.3.tar.gz
+cd nagios-3.0.3
+./configure -–with-command-group=nagcmd
+По окончании процедуры конфигурирования будет выведена таб-
+лица настроек, следует убедиться в том, что все нужное найдено, и па-
+раметры верны:
+General Options:
+————————-
+…
+Nagios executable: nagios
+Nagios user/group: nagios,nagios
+Command user/group: nagios,nagcmd
+…
+Web Interface Options:
+————————
+HTML URL: http://localhost/nagios/
+CGI URL: http://localhost/nagios/cgi-bin/
+Организуем сборку:
+make all
+По окончании сборки будет выдан список команд для установки
+различных компонентов Nagios. Устанавливаем все компоненты:
+make install
+make install-init
+make install-config
+make install-commandmode
+make install-webconf
+После выполнения третьей команды в каталог
+/usr/local/nagios/etc/ будут скопированы примеры конфигурационных
+файлов (cgi.cfg nagios.cfg resource.cfg). Команда «make install-webconf»
+создаст файл /etc/apache2/conf.d/nagios.conf, необходимый для работы с
+веб-сервером Apache.
+Сетевые информационные технологии
+47
+6. Для обеспечения возможности регистрирации через веб-
+интерфейс, при помощи htpasswd создадим учетную запись
+nagiosadmin:
+htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+Перезапускаем apache командой: /etc/init.d/apache2 reload
+7. После установки в каталог /etc/init.d/ будет помещен скрипт для
+запуска Nagios, обеспечим его автоматическую загрузку при стар-
+те системы:
+ln -s /etc/init.d/nagios /etc/rcS.d/S99nagios
+8. Устанавливаем плагины:
+tar xzf nagios-plugins-1.4.12.tar.gz
+cd nagios-plugins-1.4.12
+Используем установки по умолчанию:
+./configure –with-nagios-user=nagios -—with-nagiosgroup=
+nagios
+make
+make install
+9. Конфигурационные файлы уже настроены на мониторинг локаль-
+ной системы. Проверяем конфиг:
+/usr/local/nagios/bin/nagios -v
+/usr/local/nagios/etc/nagios.cfg
+Total Warnings: 0
+Total Errors: 0
+Things look okay – No serious problems were detected during
+the pre-flight check
+10. Запускаем Nagios:
+/etc/init.d/nagios start
+Некоторое время будет затрачено на сбор параметров локальной
+системы. Чтобы их просмотреть, при помощи веб-браузера заходим по
+адресу, указанному при установке – http://localhost/nagios/. Вводим ло-
+гин nagiosadmin и соответствующий пароль.
+				</div> 
+					
+				
+				
+				
+  
+        </div>
+    
+	
+	
+	
+	
+    </div>
+    <div id="footer"><div>
+    	<p>&copy; 2012 IndiePortal Company. <span>Template by <a href= "www.">IndiePortal Company</a></span></p>
+    </div></div>
+
+</body>
+</html>

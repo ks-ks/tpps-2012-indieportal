@@ -4,5 +4,6 @@
 *.jar
 *.war
 *.ear
-indieportal/.metadata/*
-indieportal/indieportal/.metadata/*
+*/.metadata/*
+*/.metadata/*/*
+

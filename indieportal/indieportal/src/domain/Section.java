@@ -6,6 +6,11 @@ import java.util.Collection;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
+import domain.Text;
+import domain.Theme;
+import domain.User;
+
+
 @Entity
 public class Section extends Text{
 	

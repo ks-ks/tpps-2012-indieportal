@@ -7,17 +7,27 @@ import javax.persistence.Entity;
 import org.hibernate.validator.NotEmpty;
 import org.hibernate.validator.NotNull;
 
+import domain.DomainObject;
+import domain.User;
+
 @Entity
 public abstract class Text extends DomainObject{
 	
 	@NotNull
+
+	User creator;
+	@NotNull
+
 	Date dateOfCreation;
 	@NotNull
 	Date dateOfModification;
 	@NotEmpty
-	String text;
-	@NotNull 
+	protected String text;
+
+	@NotEmpty
+	protected 
 	Long rating;
+
 	
 	protected Text(){
 		this.dateOfCreation = new Date();

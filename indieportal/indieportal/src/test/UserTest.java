@@ -18,7 +18,7 @@ public class UserTest {
 		u = new User();
 		Date d = new Date();
 		u.setDateOfLastVisit(d);
-		u.setDateOfRegistration(d);
+//		u.setDateOfRegistration(d);
 		u.setLogin("login");
 		u.setName("name");
 		u.setPassword("password");
@@ -48,6 +48,7 @@ public class UserTest {
 	@Test
 	public void testGetLogin() {
 		assert(u.getLogin() == "login");
+
 	}
 
 	@Test
@@ -58,24 +59,32 @@ public class UserTest {
 
 	@Test
 	public void testGetName() {
+
 		assert(u.getName() == "name");
+
 	}
 
 	@Test
 	public void testSetName() {
 		u.setName("name2");
+
 		assert(u.getName() == "name2");
+
 	}
 
 	@Test
 	public void testGetPassword() {
+
 		assert (u.getPassword() == "password");
+
 	}
 
 	@Test
 	public void testSetPassword() {
 		u.setPassword("password2");
+
 		assert (u.getPassword() == "password2");
+
 		
 	}
 }

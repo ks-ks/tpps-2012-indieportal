@@ -46,7 +46,9 @@ public class SectionTest {
 	@Test
 	public void testSetTitle() {
 		s.setTitle("title2");
+
 		assert(s.getText().equals("title2"));
+
 	}
 
 }

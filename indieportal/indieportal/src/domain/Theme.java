@@ -5,14 +5,20 @@ import java.util.Collection;
 import java.util.Iterator;
 
 import javax.persistence.Entity;
+
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
+
 import org.hibernate.validator.NotEmpty;
 import org.hibernate.validator.NotNull;
+
+import domain.Message;
+import domain.Section;
+import domain.User;
 
 @Entity
 @NamedQueries({
@@ -31,24 +37,15 @@ public class Theme extends Message{
 	
 	@NotEmpty
 	int position;
+
+	@NotEmpty
+	long summary; 
 	@NotNull
-	Long summary; 
-	@NotNull
-	@ManyToOne
 	Section section;
 
 	public Theme(){
 		
 	}
-	
-	protected void setCreator(User creator){
-		this.creator = creator;
-	};
-	
-	public User getCreator(){
-		return creator;
-	};
-	
 	public Section getSection() {
 		return section;
 	}

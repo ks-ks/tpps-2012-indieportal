@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
+
 
 import org.hibernate.validator.NotNull;
 
@@ -20,14 +20,10 @@ import org.hibernate.validator.NotNull;
 public class Message extends Text{
 	
 	@NotNull
-	@ManyToOne
-	User creator;
-	
-	@NotNull
-	@ManyToOne
+
 	Theme theme;
 
-	@OneToMany(mappedBy = "owner")
+
 	Collection<File> files;
 	
 	public Message() {
@@ -39,14 +35,7 @@ public class Message extends Text{
 		files = new ArrayList<File>();
 	}
 	
-	protected void setCreator(User creator){
-		this.creator = creator;
-	};
-	
-	public User getCreator(){
-		return creator;
-	};
-	
+
 	public Theme getTheme() {
 		return theme;
 	}
