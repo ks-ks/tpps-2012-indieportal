@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.junit4
+Bundle-Version: 4.8.1.v20120523-1257
+Bundle-ClassPath: org.junit4_4.8.1.v20120523-1257
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Require-Bundle: org.hamcrest.core;bundle-version="1.1.0";visibility:=reexport,
+ org.junit;bundle-version="4.8.1";visibility:=reexport
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/jdt/eclipse.jdt.ui.git;path="org.junit4";tag=v20120523-1257
+Eclipse-BundleShape: dir

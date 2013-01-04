@@ -2,40 +2,42 @@ package domain;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+
+import org.hibernate.validator.NotEmpty;
+import org.hibernate.validator.NotNull;
+
+@Entity
 public abstract class Text extends DomainObject{
-	public User creator;
-	public Date dateOfCreation;
-	public Date dateOfModification;
-	public String text;
-	public Integer rating;
+	
+	@NotNull
+	Date dateOfCreation;
+	@NotNull
+	Date dateOfModification;
+	@NotEmpty
+	String text;
+	@NotNull 
+	Long rating;
 	
 	protected Text(){
 		this.dateOfCreation = new Date();
 		this.dateOfModification = new Date();
-		this.rating = 0;
+		this.rating = 0l;
 	}
 	public Text(String text, User creator){
 		this.text = text;
-		this.creator = creator;
 		this.dateOfCreation = new Date();
 		this.dateOfModification = new Date();
-		this.rating = 0;
+		this.rating = 0l;
 	}
 	
-	protected void setRating(Integer rating){
+	protected void setRating(long rating){
 		this.rating = rating;
 	};
-	public Integer getRating(){
+	public long getRating(){
 		return rating;
 	};
 
-	protected void setCreator(User creator){
-		this.creator = creator;
-	};
-	
-	public User getCreator(){
-		return creator;
-	};
 	
 	protected void setDateOfCreation(Date dateOfCreation){
 		this.dateOfCreation = dateOfCreation;
